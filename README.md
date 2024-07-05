@@ -1,30 +1,37 @@
 # GoCheckPasswordListForPassword
 
-<h1> checks to see if a password is in a list </h1>
+## Description
 
---- Steps to Run the Program ---
+This Go program checks if a password is in a list.
+
+## Steps to Run the Program
+
 1. Create a Directory for Your Project
-<h>
-mkdir -p ~/go/src/checkpword
-<h>
-cd ~/go/src/checkpword
+    ```sh
+    mkdir -p ~/go/src/checkpword
+    cd ~/go/src/checkpword
+    ```
 
-3. Initialize a New Go Module
-<h>
-go mod init checkpword
-<h>
-Create the checkpword.go File
+2. Initialize a New Go Module
+    ```sh
+    go mod init checkpword
+    ```
 
-5. Install the Required Dependencies
-<h>
-go get github.com/bits-and-blooms/bloom/v3
-<h>
-go get github.com/schollz/progressbar/v3
+3. Create the `checkpword.go` File
 
-7. Run the Program
-<h>
-go run checkpword.go "your_password_here" "passwordlist.txt"
+4. Install the Required Dependencies
+    ```sh
+    go get github.com/bits-and-blooms/bloom/v3
+    go get github.com/schollz/progressbar/v3
+    ```
 
-<h2> Use this to check what if password list contains substring </h2>
-<h></h>
+5. Run the Program
+    ```sh
+    go run checkpword.go "your_password_here" "passwordlist.txt"
+    ```
+
+## Checking if a Password List Contains a Substring
+
+Use this command to check if the password list contains a specified substring:
+```sh
 go run DoesItCoontainSubString.go "substringToCheck" "passwordlist.txt"
