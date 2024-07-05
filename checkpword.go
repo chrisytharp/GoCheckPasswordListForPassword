@@ -81,6 +81,8 @@ func main() {
 		return
 	}
 
+	startTime := time.Now()
+
 	password := os.Args[1]
 	passwordListFile := os.Args[2]
 
@@ -102,7 +104,7 @@ func main() {
 
 	bar := progressbar.NewOptions64(
 		fileSize.Size(),
-		progressbar.OptionSetDescription("Loading passwords"),
+		progressbar.OptionSetDescription("\n Loading passwords"),
 		progressbar.OptionSetTheme(progressbar.Theme{Saucer: "=", SaucerHead: ">", BarStart: "[", BarEnd: "]"}),
 		progressbar.OptionShowBytes(true),
 		progressbar.OptionThrottle(65*time.Millisecond),
@@ -125,10 +127,13 @@ func main() {
 	wg.Wait()
 	bar.Finish()
 
-	fmt.Printf("Checking password: %s\n", password)
+	duration := time.Since(startTime)
+	fmt.Printf("\n\n Total time taken: %v\n", duration)
+
+	fmt.Printf("\n Checking password: %s\n", password)
 	if bloomFilter.TestString(password) {
-		fmt.Println("Password might be in the list (with a low probability of false positives).")
+		fmt.Println("\n Password might be in the list (with a low probability of false positives).")
 	} else {
-		fmt.Println("Password not in the list.")
+		fmt.Println("\n Password not in the list.")
 	}
 }
