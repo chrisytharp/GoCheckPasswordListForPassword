@@ -15,4 +15,5 @@ checks to see if a password is in a list
   go get github.com/schollz/progressbar/v3
 
 4. Run the Program
+/n
 go run checkpword.go "your_password_here" "passwordlist.txt"
