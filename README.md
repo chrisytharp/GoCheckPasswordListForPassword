@@ -33,6 +33,7 @@ This Go program checks if a password is in a list.
 ## Checking if a Password List Contains a Substring
 
 1. Use this script and command to check if the password list contains a specified substring and print out what passwords contain that substring:
-```sh
-go run DoesItCoontainSubString.go "substringToCheck" "passwordlist.txt"
-
+   (for example: print out all passwords that contain `123!`)
+    ```sh
+    go run DoesItContainSubString.go "substringToCheck" "passwordlist.txt"
+    ```
