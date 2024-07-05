@@ -1,5 +1,6 @@
 # GoCheckPasswordListForPassword
-checks to see if a password is in a list 
+
+<b> checks to see if a password is in a list 
 
 --- Steps to Run the Program ---
 1. Create a Directory for Your Project
@@ -23,3 +24,7 @@ go get github.com/schollz/progressbar/v3
 7. Run the Program
 <h>
 go run checkpword.go "your_password_here" "passwordlist.txt"
+
+
+<b> Use this to check what if password list contains substring
+
