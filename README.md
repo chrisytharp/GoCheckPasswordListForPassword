@@ -25,6 +25,6 @@ go get github.com/schollz/progressbar/v3
 <h>
 go run checkpword.go "your_password_here" "passwordlist.txt"
 
-
-<b> Use this to check what if password list contains substring
-
+<h2> Use this to check what if password list contains substring
+<h></h>
+go run DoesItCoontainSubString.go "substringToCheck" "passwordlist.txt"
